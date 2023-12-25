@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "case2vacancy"
+version = "0.1.0"
+description = ""
+authors = ["Artemy <cardiganus@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.4"
+numpy = "^1.26.2"
+ipykernel = "^6.27.1"
+lxml = "^4.9.3"
+sentence-transformers = "^2.2.2"
+streamlit = "^1.29.0"
+faiss-cpu = "^1.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
