@@ -28,7 +28,7 @@ def main():
     st.title("Подбор наиболее подходящих кандидатов для вакансии")
     
     vac_id = st.number_input(
-        "Введите номер желаемой вакансии",
+        "Введите номер вакансии",
         min_value=0,
         max_value=vac_number,
         value=7,
