@@ -1,6 +1,8 @@
 # Deeplearning Case 2 NLP
 ## Team 12
 
+## [Демонстрация работы модели](https://youtu.be/H8pZfWZbaMc)
+
 Структура Проекта
 
 ```
