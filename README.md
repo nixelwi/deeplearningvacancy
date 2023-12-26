@@ -30,6 +30,7 @@
 Для обучения и работы модели были использованы следующие датасеты:
 - датасет с резюме Head Hunter, предоставляемый в рамках кейса: [HeadHunter_CV](https://drive.google.com/file/d/1ikA_Ht45fXD2w5dWZ9sGTSRl-UNeCVub/view)
 - датасет с ваканссиями Head Hunter [HeadHunter_vacancy](https://www.kaggle.com/datasets/antonbelyaevd/headhunter-vacancies-for-data-search) by Anton Belyaev [contacts](https://t.me/Suiseki_desu)
+- обработанные датасеты и индексы для работы модели [data](https://drive.google.com/drive/folders/1ANtPcDgYFZFqYbQuVm_SIKIF030jaaNK?usp=sharing)
 
 # Сравнение методов matching'a 
 
