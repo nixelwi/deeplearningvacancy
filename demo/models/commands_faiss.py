@@ -17,9 +17,3 @@ def batching(model, sentences, batch_size):
         embeddings.extend(batch_embeddings)
     embeddings = np.array(embeddings)
     return embeddings
-
-
-def embeded_id(index, vec_id):
-    vec = np.empty((1, index.d), dtype="float32")
-    index.reconstruct(vec_id, vec[0])
-    return vec
