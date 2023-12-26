@@ -5,7 +5,7 @@ from commands_faiss import batching, text_for_demo
 from sentence_transformers import SentenceTransformer
 
 if __name__ == "__main__":
-    db_path = "case2cv\demo\demo_application\data"
+    db_path = "case2cv/demo/demo_application/data"
     cv_db_name = "cv_db.index"
 
     cv_path = "case2cv/data/processed/res_prepared.csv"
