@@ -23,7 +23,7 @@ def embeded_id(index, vec_id):
 
 
 def main():
-    st.title("Подбор наиболее подходящих вакансий по резюме")
+    st.title("Подбор наиболее подходящих вакансий")
 
     cv_id = st.number_input(
         "Введите номер резюме",
