@@ -5,10 +5,10 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-cv_csv = "./data/processed/res_prepared.csv"
-vac_csv = "./data/processed/vac_prepared.csv"
-cv_index_demo = "data/cv_db.index"
-vac_index_demo = "data/vac_db.index"
+cv_csv = "case2cv/data/processed/res_prepared.csv"
+vac_csv = "case2cv/data/processed/vac_prepared.csv"
+cv_index_demo = "case2cv/demo/demo_application/data/cv_db.index"
+vac_index_demo = "case2cv/demo/demo_application/data/vac_db.index"
 vac_id = 7
 topn = 10
 
@@ -27,8 +27,8 @@ def embeded_id(index, vec_id):
 
 
 def main():
-
     st.title("Подбор наиболее подходящих кандидатов для вакансии")
+    
     vac_id = st.number_input(
         "Введите id вакансии",
         min_value=0,
