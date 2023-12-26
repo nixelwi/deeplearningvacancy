@@ -32,11 +32,6 @@ def main():
         value=7,
     )
 
-    cv_button = st.button("Показать резюме")
-    if cv_button:
-        st.write("Выбранное резюме")
-        st.dataframe(cv_data.iloc[cv_id])
-
     topn = st.number_input(
         "Введите кол-во подбираемых вакансий (оптимально 10)",
         min_value=1,
