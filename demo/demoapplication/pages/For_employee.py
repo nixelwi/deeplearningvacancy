@@ -3,12 +3,10 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-cv_csv = "case2cv/data/processed/res_prepared.csv"
-vac_csv = "case2cv/data/processed/vac_prepared.csv"
-cv_index_demo = "case2cv/demo/demo_application/data/cv_db.index"
-vac_index_demo = "case2cv/demo/demo_application/data/vac_db.index"
-cv_id = 7
-topn = 10
+cv_csv = "data/res_prepared.csv"
+vac_csv = "data/vac_prepared.csv"
+cv_index_demo = "data/cv_db.index"
+vac_index_demo = "data/vac_db.index"
 
 cv_index = faiss.read_index(cv_index_demo)
 vac_index = faiss.read_index(vac_index_demo)
