@@ -3,11 +3,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-cv_csv = "./data/processed/res_prepared.csv"
-vac_csv = "./data/processed/vac_prepared.csv"
-cv_index_demo = "data/cv_db.index"
-vac_index_demo = "data/vac_db.index"
-vac_id = 7
+cv_csv = "case2cv/data/processed/res_prepared.csv"
+vac_csv = "case2cv/data/processed/vac_prepared.csv"
+cv_index_demo = "case2cv/demo/demo_application/data/cv_db.index"
+vac_index_demo = "case2cv/demo/demo_application/data/vac_db.index"
+cv_id = 7
 topn = 10
 
 cv_index = faiss.read_index(cv_index_demo)
@@ -25,7 +25,6 @@ def embeded_id(index, vec_id):
 
 
 def main():
-    
     st.title("Подбор наиболее подходящих вакансий по резюме")
 
     cv_id = st.number_input(
@@ -51,10 +50,10 @@ def main():
     if vac_button:
         cv_embed = embeded_id(cv_index, cv_id)
         _, vac_ids = vac_index.search(cv_embed, topn)
-        
+
         st.write("Для лучшего соискателя")
         st.dataframe(cv_data.iloc[cv_id])
-        
+
         st.write(f"Были подобраны лучшие работодатели:")
         st.dataframe(vac_data.iloc[vac_ids[0]])
 
