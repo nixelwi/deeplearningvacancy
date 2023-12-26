@@ -26,7 +26,7 @@ def embeded_id(index, vec_id):
 
 def main():
     st.title("Подбор наиболее подходящих кандидатов для вакансии")
-    
+
     vac_id = st.number_input(
         "Введите номер вакансии",
         min_value=0,
@@ -34,15 +34,10 @@ def main():
         value=7,
     )
 
-    vac_button = st.button("Показать вакансию")
-    if vac_button:
-        st.write("Выбранная вакансия")
-        st.dataframe(vac_data.iloc[vac_id])
-
     topn = st.number_input(
         "Введите кол-во подбираемых кандидатов (оптимально 10)",
         min_value=1,
-        max_value=20,
+        max_value=30,
         value=10,
     )
 
