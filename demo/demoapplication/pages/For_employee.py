@@ -26,7 +26,7 @@ def main():
     st.title("Подбор наиболее подходящих вакансий по резюме")
 
     cv_id = st.number_input(
-        "Введите id резюме",
+        "Введите номер резюме",
         min_value=0,
         max_value=cv_number,
         value=7,
