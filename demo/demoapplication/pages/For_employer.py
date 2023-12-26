@@ -5,12 +5,10 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-cv_csv = "case2cv/data/processed/res_prepared.csv"
-vac_csv = "case2cv/data/processed/vac_prepared.csv"
-cv_index_demo = "case2cv/demo/demo_application/data/cv_db.index"
-vac_index_demo = "case2cv/demo/demo_application/data/vac_db.index"
-vac_id = 7
-topn = 10
+cv_csv = "data/res_prepared.csv"
+vac_csv = "data/vac_prepared.csv"
+cv_index_demo = "data/cv_db.index"
+vac_index_demo = "data/vac_db.index"
 
 cv_index = faiss.read_index(cv_index_demo)
 vac_index = faiss.read_index(vac_index_demo)
@@ -30,7 +28,7 @@ def main():
     st.title("Подбор наиболее подходящих кандидатов для вакансии")
     
     vac_id = st.number_input(
-        "Введите id вакансии",
+        "Введите номер желаемой вакансии",
         min_value=0,
         max_value=vac_number,
         value=7,
@@ -48,7 +46,7 @@ def main():
         value=10,
     )
 
-    cv_button = st.button("Подобрать вакансии")
+    cv_button = st.button("Подобрать кандидатов")
     if cv_button:
         vac_embed = embeded_id(vac_index, vac_id)
         _, cv_ids = cv_index.search(vac_embed, topn)
