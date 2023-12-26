@@ -14,7 +14,14 @@ lxml = "^4.9.3"
 sentence-transformers = "^2.2.2"
 streamlit = "^1.29.0"
 faiss-cpu = "^1.7.2"
+torch = {version = "^2.1.2+cu121", source = "pytorch"}
+torchvision = {version = "^0.16.2+cu121", source = "pytorch"}
 
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
