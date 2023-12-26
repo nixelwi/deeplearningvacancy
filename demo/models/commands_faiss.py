@@ -8,6 +8,7 @@ def text_for_demo(dataset, text):
     vac = vac_demo.to_list()
     return vac
 
+
 def batching(model, sentences, batch_size):
     embeddings = []
     for i in range(0, len(sentences), batch_size):
@@ -16,6 +17,7 @@ def batching(model, sentences, batch_size):
         embeddings.extend(batch_embeddings)
     embeddings = np.array(embeddings)
     return embeddings
+
 
 def embeded_id(index, vec_id):
     vec = np.empty((1, index.d), dtype="float32")
